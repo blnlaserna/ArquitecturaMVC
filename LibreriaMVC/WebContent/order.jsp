@@ -32,7 +32,10 @@
 		
 		<%
 		// Scriplet 2: Chequea si la cesta está vacia
-		List<ElementoPedido> cesta = (List<ElementoPedido>) session.getAttribute("carrito");
+		@SuppressWarnings (value="unchecked")
+		// print(session.getAttribute("carrito")(0));
+		List<ElementoPedido> cesta = new ArrayList();
+		cesta = (List<ElementoPedido>)session.getAttribute("carrito");
 		if (cesta != null && cesta.size() > 0) {
 		%>
 		<p><strong>Tu cesta contiene: </strong></p>

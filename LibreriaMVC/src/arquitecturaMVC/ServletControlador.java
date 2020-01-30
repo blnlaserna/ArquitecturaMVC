@@ -25,6 +25,7 @@ public class ServletControlador extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		
 		// Recupera el carrito de la sesión actual
+		@SuppressWarnings("unchecked")
 		List<ElementoPedido> elCarrito = (ArrayList<ElementoPedido>) session.getAttribute("carrito");
 		
 		// Determina a que página jsp redirigirá
