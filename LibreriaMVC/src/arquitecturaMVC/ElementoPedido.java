@@ -14,7 +14,7 @@ public class ElementoPedido {
     /**
      * Default constructor. 
      */
-    public ElementoPedido() {
+    public ElementoPedido(int idLibro, int cantidad) {
         this.idLibro = idLibro;
         this.cantidad = cantidad;
         
